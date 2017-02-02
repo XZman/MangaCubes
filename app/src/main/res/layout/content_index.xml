@@ -12,4 +12,39 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="cubes.studio.manga.IndexActivity"
     tools:showIn="@layout/activity_index">
+
+    <TextView
+        android:id="@+id/indexTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:text="@string/indexActivity_title"/>
+
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/indexTitleView"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:hint="@string/indexActivity_search_title"
+        android:textColorHint="#CCCCCC"
+        android:textColor="#A0A0A0"/>
+
+    <ListView
+        android:id="@+id/hotMangaListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBox">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/followingMangaListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotMangaListView">
+
+    </ListView>
 </RelativeLayout>

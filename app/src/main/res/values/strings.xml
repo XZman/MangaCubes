@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Manga</string>
     <string name="action_settings">Settings</string>
+    <string name="copyright_info">&#169;2016 Cubes Studio - Manga. @someDeveloperNames</string>
+
+    <string name="indexActivity_title">漫画INDEX</string>
+    <string name="indexActivity_subtitle">Presented by @someAuthor</string>
+    <string name="indexActivity_search_title">请在这里输入想要搜索的漫画</string>
+    <string name="indexActivity_hot">热门</string>
+    <string name="indexActivity_following">正在追的</string>
+    <string name="indexActivity_following_manage">管理</string>
 </resources>
