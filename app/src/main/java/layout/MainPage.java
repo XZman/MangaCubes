@@ -1,27 +1,29 @@
-package cubes.studio.manga;
+package layout;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import cubes.studio.manga.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link IndexPage.OnFragmentInteractionListener} interface
+ * {@link MainPage.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link IndexPage#newInstance} factory method to
+ * Use the {@link MainPage#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class IndexPage extends Fragment {
+public class MainPage extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public IndexPage() {
+    public MainPage() {
         // Required empty public constructor
     }
 
@@ -29,13 +31,11 @@ public class IndexPage extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment IndexPage.
+     * @return A new instance of fragment MainPage.
      */
     // TODO: Rename and change types and number of parameters
-    public static IndexPage newInstance(String param1, String param2) {
-        IndexPage fragment = new IndexPage();
+    public static MainPage newInstance() {
+        MainPage fragment = new MainPage();
 
         return fragment;
     }
@@ -63,13 +63,13 @@ public class IndexPage extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener)context;
-        }
-        else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener)context;
+//        }
+//        else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
     }
 
     @Override
