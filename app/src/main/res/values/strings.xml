@@ -9,4 +9,5 @@
     <string name="indexActivity_hot">热门</string>
     <string name="indexActivity_following">正在追的</string>
     <string name="indexActivity_following_manage">管理</string>
+
 </resources>
