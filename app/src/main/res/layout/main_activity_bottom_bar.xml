@@ -3,33 +3,38 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <!-- TODO: stylize the toolbar; add icons -->
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
         <Button
+            android:id="@+id/main_page_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Index"
+            android:text="@string/main_page_name"
             android:backgroundTint="@color/colorPrimary"/>
 
         <Button
+            android:id="@+id/category_page_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Index"
+            android:text="@string/category_page_name"
             android:backgroundTint="@color/colorPrimary"/>
 
         <Button
+            android:id="@+id/bookmark_page_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Index"
+            android:text="@string/bookmark_page_name"
             android:backgroundTint="@color/colorPrimary"/>
 
         <Button
+            android:id="@+id/myInfo_page_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Index"
+            android:text="@string/myInfo_page_name"
             android:backgroundTint="@color/colorPrimary"/>
 
     </Toolbar>

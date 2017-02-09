@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:padding="@dimen/fab_margin"
+             tools:context="layout.CategoryPage">
+
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:hint="@string/main_page_search_title"
+        android:textColorHint="#CCCCCC"
+        android:textColor="#A0A0A0"/>
+
+</FrameLayout>
