@@ -1,12 +1,17 @@
 package cubes.studio.manga;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 public class MainActivity extends AppCompatActivity {
+
+    private FrameLayout currentView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction transc = fm.beginTransaction();
+        transc.replace(R.id.current_view, IndexPage.newInstance());
+        transc.commit();
     }
 
     @Override
