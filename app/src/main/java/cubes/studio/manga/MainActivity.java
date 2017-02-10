@@ -44,22 +44,22 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.main_page_button:
                     if (mMainPage == null)
                         mMainPage = MainPage.newInstance();
-                    MainActivity.this.setFragmentAsCurrentView(mMainPage);
+                    setFragmentAsCurrentView(mMainPage);
                     break;
                 case R.id.category_page_button:
                     if (mCategoryPage == null)
                         mCategoryPage = CategoryPage.newInstance();
-                    MainActivity.this.setFragmentAsCurrentView(mCategoryPage);
+                    setFragmentAsCurrentView(mCategoryPage);
                     break;
                 case R.id.bookmark_page_button:
                     if (mBookmarkPage == null)
                         mBookmarkPage = BookmarkPage.newInstance();
-                    MainActivity.this.setFragmentAsCurrentView(mBookmarkPage);
+                    setFragmentAsCurrentView(mBookmarkPage);
                     break;
                 case R.id.myInfo_page_button:
                     if (mMyInfoPage == null)
                         mMyInfoPage = MyInfoPage.newInstance();
-                    MainActivity.this.setFragmentAsCurrentView(mMyInfoPage);
+                    setFragmentAsCurrentView(mMyInfoPage);
                     break;
             }
         };
