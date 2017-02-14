@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import cubes.studio.manga.ImageAdapter;
+import layout.support.ImageAdapter;
 import cubes.studio.manga.R;
 
 
@@ -32,7 +32,6 @@ public class MainPage extends Fragment {
      *
      * @return A new instance of fragment MainPage.
      */
-    // TODO: Rename and change types and number of parameters
     public static MainPage newInstance() {
         MainPage fragment = new MainPage();
         fragment.content_image_ids = new int[10];

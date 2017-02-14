@@ -1,4 +1,4 @@
-package cubes.studio.manga;
+package layout.support;
 
 import android.content.Context;
 import android.view.View;
