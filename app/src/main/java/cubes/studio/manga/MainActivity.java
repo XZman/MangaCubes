@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
 import layout.BookmarkPage;
 import layout.CategoryPage;
 import layout.MainPage;
@@ -97,4 +98,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

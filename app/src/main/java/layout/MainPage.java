@@ -1,27 +1,26 @@
 package layout;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.Toast;
 
+import cubes.studio.manga.ImageAdapter;
 import cubes.studio.manga.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link MainPage.OnFragmentInteractionListener} interface
- * to handle interaction events.
  * Use the {@link MainPage#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class MainPage extends Fragment {
 
-    private OnFragmentInteractionListener mListener;
+    private int[] content_image_ids;
 
     public MainPage() {
         // Required empty public constructor
@@ -36,28 +35,24 @@ public class MainPage extends Fragment {
     // TODO: Rename and change types and number of parameters
     public static MainPage newInstance() {
         MainPage fragment = new MainPage();
-
+        fragment.content_image_ids = new int[10];
+        java.util.Arrays.fill(fragment.content_image_ids, R.mipmap.ic_launcher);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        GridView gv = (GridView)findViewById(R.id.main_page_image_list);
+        ImageAdapter iAdapter = new ImageAdapter(content_image_ids, getActivity());
+        gv.setAdapter(iAdapter);
+        gv.setOnClickListener(v -> Toast.makeText(getActivity(), "test", Toast.LENGTH_LONG).show());
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main_page, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
     }
 
     @Override
@@ -68,21 +63,10 @@ public class MainPage extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+    private View findViewById(int id) {
+        return getActivity().findViewById(id);
     }
+
 }
