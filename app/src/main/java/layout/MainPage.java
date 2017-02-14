@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ import cubes.studio.manga.R;
  */
 public class MainPage extends Fragment {
 
+    private View mContext;
     private int[] content_image_ids;
 
     public MainPage() {
@@ -42,16 +44,17 @@ public class MainPage extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        GridView gv = (GridView)findViewById(R.id.main_page_image_list);
-        ImageAdapter iAdapter = new ImageAdapter(content_image_ids, getActivity());
-        gv.setAdapter(iAdapter);
-        gv.setOnClickListener(v -> Toast.makeText(getActivity(), "test", Toast.LENGTH_LONG).show());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_page, container, false);
+        mContext = inflater.inflate(R.layout.fragment_main_page, container, false);
+
+        GridView gv = (GridView)findViewById(R.id.main_page_image_list);
+        ImageAdapter iAdapter = new ImageAdapter(content_image_ids, getActivity());
+        gv.setAdapter(iAdapter);
+        gv.setOnItemClickListener((parent, view, position, id) -> Toast.makeText(getActivity(), "test " + position, Toast.LENGTH_LONG).show());
+        return mContext;
     }
 
     @Override
@@ -65,7 +68,7 @@ public class MainPage extends Fragment {
     }
 
     private View findViewById(int id) {
-        return getActivity().findViewById(id);
+        return mContext.findViewById(id);
     }
 
 }

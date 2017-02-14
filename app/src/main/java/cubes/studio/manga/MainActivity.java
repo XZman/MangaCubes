@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import cubes.studio.manga.R;
 import layout.BookmarkPage;
 import layout.CategoryPage;
 import layout.MainPage;
